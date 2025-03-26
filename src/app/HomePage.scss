@@ -1,0 +1,712 @@
+body {
+  background-color: #faf7f7;
+  overflow-x: hidden;
+}
+
+.HomeContainer {
+  padding: 0;
+}
+.Hero-Section {
+  display: flex; /* Включает flexbox */
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center; /* Центрирует по вертикали */
+  width: 100%; /* Занимает всю ширину экрана */
+  height: 100vh; /* Занимает всю высоту экрана */
+  background-image: url("/Home/67dd694c705c9de3e40b21f0_033.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  .HeroInfo {
+    text-align: center; /* Выравнивает текст внутри блока по центру */
+    color: white; /* Делает текст видимым на затемненном фоне */
+    z-index: 2;
+
+    h1 {
+      max-width: 400px;
+      font-size: 56px;
+      margin-bottom: 20px; /* Отступ между заголовком и кнопкой */
+    }
+
+    button {
+      padding: 20px 120px;
+      font-size: 1rem;
+      color: #fff;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+.Hero-Section::before {
+  content: ""; /* Обязательное свойство для псевдоэлемента */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26); /* Черный цвет с прозрачностью 50% */
+  z-index: 1; /* Размещает затемнение поверх фона */
+}
+
+.Courses-Section {
+  width: 100%;
+  position: relative;
+  bottom: 150px;
+  z-index: 3;
+
+  .Courses-Wrapper {
+    padding: 20px;
+    gap: 10px;
+
+    .Course-Card {
+      max-width: 300px;
+      text-align: center;
+      padding: 10px 30px;
+      border: 1px solid #ccc;
+
+      span {
+        padding: 20px;
+        font-size: 24px;
+        background-color: orange;
+        color: #fff;
+      }
+
+      h3 {
+        margin-top: 35px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      img {
+        background-color: #ccc;
+        border-radius: 50%;
+        padding: 15px;
+        margin-top: 35px;
+      }
+
+      p {
+        text-align: left;
+        margin-top: 35px;
+      }
+
+      a {
+        margin-top: 35px;
+      }
+    }
+  }
+}
+
+.AboutUs-preview {
+  display: grid;
+  grid-template-columns: 2fr 2fr; /* Две колонки для больших экранов */
+  gap: 40px; /* Расстояние между элементами */
+}
+
+.AboutUs-text {
+  padding: 20px;
+  text-align: left; /* Выравнивание текста по левому краю */
+}
+
+.AboutUs-text h2 {
+  font-size: 62px;
+  font-weight: bold;
+  margin-bottom: 20px; /* Отступ между заголовком и параграфом */
+}
+
+.AboutUs-text p {
+  font-size: 26px;
+  line-height: 1.6; /* Интервал между строками */
+  margin-bottom: 30px; /* Отступ между параграфом и кнопкой */
+}
+
+.AboutUs-text button {
+  color: #fff;
+  background-color: #000;
+  padding: 15px 50px;
+  border-radius: 40px;
+  text-transform: uppercase;
+  font-size: 18px; /* Размер текста кнопки */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Плавный переход при наведении */
+}
+
+.AboutUs-text button:hover {
+  background-color: #333; /* Изменение цвета при наведении */
+}
+
+.AboutUs-Cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 150px;
+
+  .AboutUs-Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 340px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+    filter: blur(2px);
+    opacity: 0.5;
+    transition: 0.6s ease all;
+    transition: all 0.4s ease;
+
+    .cardInfo {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  .AboutUs-Card:hover {
+    transform: perspective(800px) rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+.Quote-Section {
+  position: relative; /* Необходимо для позиционирования дочерних элементов */
+  width: 100%; /* Занимает всю ширину экрана */
+  height: 100vh; /* Высота равна высоте экрана */
+  background-image: url("/images/lore.jpeg"); /* Путь к фоновому изображению */
+  background-size: cover; /* Растягивает изображение на всю область */
+  background-position: center; /* Центрирует изображение */
+  background-repeat: no-repeat; /* Запрещает повторение изображения */
+  display: flex; /* Использует Flexbox для выравнивания содержимого */
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center; /* Центрирует по вертикали */
+  color: white; /* Цвет текста на темном фоне */
+  z-index: 5;
+}
+
+.Quote-Section::before {
+  content: ""; /* Обязательное свойство для псевдоэлемента */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26); /* Черный цвет с прозрачностью 50% */
+  z-index: 3; /* Размещает затемнение поверх фона */
+}
+
+.quote {
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+}
+
+.qoute-author-Image {
+  width: 120px; /* Ширина изображения */
+  height: 120px; /* Высота изображения */
+  border-radius: 50%; /* Делает изображение круглым */
+  object-fit: cover; /* Обрезает избыточное изображение */
+  overflow: hidden; /* Убирает возможные артефакты */
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.Lore-Section {
+  position: relative;
+  z-index: 6;
+  background-color: #fff;
+}
+
+.Lore-Explore {
+  top: 20px;
+  position: relative;
+  left: 10px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+  writing-mode: vertical-lr;
+  color: #ccc;
+}
+
+.Lore-Explore::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 60px;
+  top: 80px;
+  left: 10px;
+  border: 1px solid #ccc;
+  writing-mode: horizontal-tb;
+}
+
+.Lore-Cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.Lore-Card {
+  max-width: 420px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  .Lore-Card-CatNDate {
+    display: flex;
+    gap: 40px;
+    justify-content: space-around;
+  }
+
+  h4 {
+    font-weight: bold;
+  }
+}
+
+.Lore-Card-Image {
+  position: relative;
+}
+
+.Lore-Card-Image::before {
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26); 
+  z-index: 45; 
+}
+
+.Lore-Card-Image::after {
+  content: url("/icons/arrow.svg");
+  width: 70px;
+  height: 70px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 40%;
+  left: 40%;
+  position: absolute;
+  z-index: 1;
+}
+
+.Lore-Card:hover {
+  .Lore-Card-Image::before {
+    transition: all 0.6s ease;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.Inspiration-Section {
+  margin-top: 100px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px; /* Расстояние между колонками */
+  align-items: flex-start;
+}
+
+.Insporation-Info {
+  position: sticky;
+  align-items: flex-start;
+  top: 120px;
+  h5 {
+    font-size: 58px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 32px;
+  }
+  button {
+    padding: 15px 70px;
+    margin-top: 20px;
+    background-color: #000;
+    color: #fff;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+  }
+
+  button:hover {
+    transition: all 0.2s ease-in-out;
+    opacity: 0.7;
+  }
+}
+
+.Insporation-Cards {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Insporation-Card {
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 50px;
+  background-color: #f9f9f9; /* Фон карточки */
+  border-radius: 10px; /* Скругленные углы */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального выделения */
+}
+
+.startCov-Bg{
+  display: flex; /* Включает flexbox */
+  justify-content: center; /* Центрирует по горизонтали */
+  align-items: center; /* Центрирует по вертикали */
+  width: 100%; /* Занимает всю ширину экрана */
+  height: 100vh; /* Занимает всю высоту экрана */
+  background-image: url("/images/startconver.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+
+
+  .startCov{
+    max-width: 630px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #fff;
+    span, button{
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+    h3{
+      text-wrap: wrap;
+      font-size: 2.6rem;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+    button{
+      max-width: 250px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 15px;
+      margin-top: 20px;
+      transition: all .3s ease-in-out;
+    }
+  
+    button:hover{
+      background-color: rgba(255, 255, 255, .4);
+    }
+  }
+  
+}
+
+.insta-Section{
+  margin-top: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.insta-info{
+  span{
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    color: #ccc;
+  }
+  h3{
+    font-size: 32px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  a{
+    text-transform: uppercase;
+    color: #ccc;
+    font-size: 18px;
+    text-decoration: none;
+    position: relative;
+  }
+  a::before{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 1px;
+    top: 30;
+    left: 0;
+    border: 1px solid #ccc;
+  }
+}
+
+.insta-posts{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.insta-card{
+  max-width: 250px;
+  height: 250px;
+  position: relative;
+}
+
+.insta-card::after{
+  content: ""; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.26); 
+  z-index: 50; 
+}
+
+.insta-card::before{
+  content: url("/icons/insta.svg");
+  width: 70px;
+  height: 70px;
+  border: 1px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: 40%;
+  left: 35%;
+  position: absolute;
+  z-index: 1;
+  padding-top: 5px;
+}
+
+.insta-card:hover{
+  .insta-card::after{
+    transition: all 0.6s ease;
+    background-color: rgba(0, 0, 0, 0);
+  }
+}
+
+.contact-Section{
+  margin-top: 150px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+
+
+  .contact-Info{
+    display: flex;
+    flex-direction: column;
+    p{
+      letter-spacing: .1rem;
+      text-transform: uppercase;
+      color: #535353;
+    }
+    h4{
+      font-size: 32px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    a{
+      text-transform: uppercase;
+      color: #ccc;
+      font-size: 18px;
+      text-decoration: none;
+      position: relative;
+    }
+    a::before{
+      content: '';
+      position: absolute;
+      width: 110px;
+      height: 1px;
+      top: 30;
+      left: 0;
+      border: 1px solid #ccc;
+    }
+  }
+
+  .contact-Cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+
+    .contact-Card{
+      max-width: 430px;
+      min-width: 260px;
+      min-height: 340px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      gap: 20px;
+      background-color: #faf7f7;
+      border: 1px solid #000;
+      padding: 30px;
+  
+      button{
+        letter-spacing: 0.34rem;
+        text-transform: uppercase;
+        border: 1px solid #edebeb;
+        border-radius: 30px;
+        padding: 15px 25px;
+        transition: all .3s ease-in-out;
+      }
+
+      .contact-phone, .contact-email{
+        position: relative;
+        margin-top: 10px;
+      }
+
+      button:hover {
+        background-color: rgba(237,235,235, 0.3);
+      }
+    }
+  }
+
+  
+}
+
+@media (max-width: 992px) {
+  .AboutUs-Cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Lore-Cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .Inspiration-Section {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .Insporation-Info {
+    position: relative;
+    margin-bottom: 210px;
+  }
+  .Insporation-Card-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .insta-posts{
+    grid-template-columns: repeat(2, 2fr);
+  }
+  .contact-Cards{
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .HeroInfo h1 {
+    font-size: 2rem; /* Уменьшает размер заголовка */
+  }
+
+  .HeroInfo button {
+    font-size: 0.9rem; /* Уменьшает размер текста кнопки */
+    padding: 8px 16px; /* Уменьшает внутренние отступы */
+  }
+
+  .Courses-Wrapper {
+    justify-content: center;
+  }
+
+  .AboutUs-preview {
+    grid-template-columns: 1fr; /* Одна колонка для маленьких экранов */
+  }
+
+  .AboutUs-text h2 {
+    font-size: 36px; /* Еще больше уменьшаем размер заголовка */
+  }
+
+  .AboutUs-text p {
+    font-size: 18px; /* Еще больше уменьшаем размер текста */
+  }
+
+  .AboutUs-text button {
+    font-size: 14px; /* Еще больше уменьшаем размер текста кнопки */
+    padding: 10px 30px; /* Еще меньше внутренних отступов */
+  }
+
+  .AboutUs-Cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Insporation-Card-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .insta-Section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .insta-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h3{
+      text-align: center;
+    }
+  }
+  .insta-posts{
+    grid-template-columns: repeat(1, 2fr);
+  }
+  .insta-card{
+    max-width: 400px;
+    height: 400px;
+  }
+  .contact-Info{
+    align-items: center;
+    p{
+      text-align: center;
+    }
+  }
+  .contact-Cards{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-Section{
+    grid-template-columns: repeat(1,1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .HeroInfo {
+    h1 {
+      font-size: 20px;
+    }
+  }
+  .HeroInfo button {
+    font-size: 0.8rem; /* Еще больше уменьшает размер текста кнопки */
+    padding: 6px 12px; /* Еще меньше внутренних отступов */
+  }
+
+  .AboutUs-Cards {
+    align-items: center;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Lore-Cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Lore-Explore {
+    margin-bottom: 100px;
+    position: relative;
+    text-transform: uppercase;
+    writing-mode: horizontal-tb;
+  }
+
+  .Lore-Explore::after {
+    content: "";
+    display: none;
+  }
+  .Insporation-Card-Info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Work_Sans } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,12 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const workSans = Work_Sans({
+  variable: "--font-work-sans", // CSS переменная для Work Sans
+  subsets: ["latin"], // Поддерживаемые подмножества символов
+  weight: ["400", "500", "700"], // Веса шрифта (обычный, полужирный, жирный)
 });
 
 export const metadata: Metadata = {
@@ -25,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${workSans.variable} antialiased`}
       >
         {children}
       </body>
