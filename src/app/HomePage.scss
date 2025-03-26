@@ -204,6 +204,9 @@ body {
   flex-direction: column;
   align-items: center;
   z-index: 3;
+  p{
+    font-size: 2rem;
+  }
 }
 
 .qoute-author-Image {
@@ -409,6 +412,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 40px;
 }
 
 .insta-info{
@@ -448,7 +452,7 @@ body {
 }
 
 .insta-card{
-  max-width: 250px;
+  min-width: 250px;
   height: 250px;
   position: relative;
 }
@@ -684,6 +688,9 @@ body {
     padding: 6px 12px; /* Еще меньше внутренних отступов */
   }
 
+  .AboutUs-text{
+    text-align: center;
+  }
   .AboutUs-Cards {
     align-items: center;
     grid-template-columns: repeat(1, 1fr);
@@ -700,9 +707,18 @@ body {
     writing-mode: horizontal-tb;
   }
 
+  .quote{
+    p{
+      font-size: 1.8rem;
+      max-width: 160px;
+    }
+  }
   .Lore-Explore::after {
     content: "";
     display: none;
+  }
+  .Insporation-Info{
+    text-align: center;
   }
   .Insporation-Card-Info {
     display: flex;

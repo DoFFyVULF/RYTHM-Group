@@ -29,15 +29,6 @@
     }
 }
 
-.footer::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    top: -40;
-    left: 0;
-    border: 1px solid #ccc;
-}
-
 @media (max-width:768px) {
     .footer{
         flex-direction: column;

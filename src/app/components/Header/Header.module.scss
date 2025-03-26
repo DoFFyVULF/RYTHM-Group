@@ -66,31 +66,6 @@
 
 }
 
-.nav_menu.active ul li:nth-child(3){
-    a{
-        position: relative;
-    }
-    a:before{
-        content: '';
-        position: absolute;
-        width: 80px;
-        height: 1px;
-        border: 1px solid #000;
-        top: -60;
-        left: -50;
-        transform: rotate(45deg);
-    }
-    a::after{
-        content: '';
-        position: absolute;
-        width: 80px;
-        height: 1px;
-        border: 1px solid #000;
-        top: -60;
-        right: -50;
-        transform: rotate(-45deg);
-    }
-}
 
 .mobile_actions{
     display: flex;

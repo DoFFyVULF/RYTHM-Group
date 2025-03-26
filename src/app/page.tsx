@@ -102,7 +102,7 @@ export default function Home() {
                 </Container>
                 <section className='Quote-Section mt-40'>
                     <div className="quote">
-                        <p className='text-5xl text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus commodi expedita incidunt.</p>
+                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus commodi expedita incidunt.</p>
                         <div className="quote-author flex items-center gap-3">
                             <Image className='qoute-author-Image' src='/images/lore-profile.jpeg' alt='' width={140} height={140} />
                             <div className="qoute-author-info flex flex-col">
