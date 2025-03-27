@@ -57,7 +57,7 @@ export default function Home() {
                                 <button className=''>About Us</button>
                             </div>
                             <div className="AboutUs-img">
-                                <Image className='w-full h-full object-cover' src='/images/aboutus.jpeg' alt='' width={500} height={500} />
+                                <Image className='w-full h-full object-cover' src='/images/aboutus.jpeg' alt='' width={700} height={800} quality={100} />
                             </div>
                         </div>
                         <div className="AboutUs-Cards">
@@ -104,7 +104,7 @@ export default function Home() {
                     <div className="quote">
                         <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime repellendus commodi expedita incidunt.</p>
                         <div className="quote-author flex items-center gap-3">
-                            <Image className='qoute-author-Image' src='/images/lore-profile.jpeg' alt='' width={140} height={140} />
+                            <Image className='qoute-author-Image' src='/images/lore-profile.jpeg' alt='' width={140} height={140}  />
                             <div className="qoute-author-info flex flex-col">
                                 <span className=''>Ryan Baser</span>
                                 <span className='uppercase'>delta airlines</span>
@@ -235,22 +235,22 @@ export default function Home() {
                         <div className="insta-posts">
                             <a href="#">
                                 <div className="insta-card">
-                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={120} height={120}></Image>
+                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={250} height={250} quality={100}></Image>
                                 </div>
                             </a>
                             <a href="#">
                                 <div className="insta-card">
-                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={120} height={120}></Image>
+                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={250} height={250} quality={100}></Image>
                                 </div>
                             </a>
                             <a href="#">
                                 <div className="insta-card">
-                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={120} height={120}></Image>
+                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={250} height={250} quality={100} ></Image>
                                 </div>
                             </a>
                             <a href="#">
                                 <div className="insta-card">
-                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={120} height={120}></Image>
+                                    <Image className='w-full h-full object-cover' src='/InstaSec/ff1.jpeg' alt='' width={250} height={250} quality={100} ></Image>
                                 </div>
                             </a>
                         </div>
