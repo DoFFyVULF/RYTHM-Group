@@ -1,5 +1,5 @@
-body{
-  background-color: #faf7f7;
+body {
+    background-color: #faf7f7;
 }
 .container-fluid {
     padding: 0;
@@ -10,7 +10,7 @@ body{
     align-items: center; /* Центрирует по вертикали */
     width: 100%; /* Занимает всю ширину экрана */
     height: 100vh; /* Занимает всю высоту экрана */
-    background-image: url("/Home/Serv.jpeg");
+    background-image: url("/Home/Company.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -52,41 +52,22 @@ body{
     z-index: 1; /* Размещает затемнение поверх фона */
 }
 
-.steps-section {
+.team-preview-sec {
+    background-color: #fff;
     position: relative;
-    top: -80px;
-    z-index: 20;
-    .steps-service {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        background-color: #f9f9f9;
-        .step-service {
-            max-width: 800px;
-            min-height: 400px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            padding: 40px;
+    z-index: 29;
+    .team-cards {
+        margin-top: -60px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 60px 30px;
 
-            span {
-                font-size: 28px;
-                letter-spacing: 0.25rem;
-            }
-            h3 {
-                margin-top: 100px;
-            }
-            p {
-                max-width: 300px;
-                color: #757070;
-            }
-
-            a {
-                font-size: 14px;
-                text-decoration: none;
-                text-transform: uppercase;
-                letter-spacing: 0.26rem;
-                cursor: pointer;
-            }
+        .team-card {
+            width: 250px;
+            height: 250px;
         }
     }
 }
@@ -101,6 +82,7 @@ body{
     .Insporation-Info {
         position: sticky;
         align-items: flex-start;
+
         top: 80px;
         h5 {
             font-size: 58px;
@@ -132,43 +114,67 @@ body{
     }
 
     .Insporation-Card {
-        min-width: 200px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        gap: 20px;
-        padding: 50px;
-        background-color: #f9f9f9; /* Фон карточки */
-        border-radius: 10px; /* Скругленные углы */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального выделения */
+        .cores {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
 
-        .card-header {
-            .card-header-info {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                gap: 30px;
-
-                p {
-                    max-width: 250px;
-                    letter-spacing: 0.12rem;
-                }
+            .core-item {
+                padding: 15px;
+                border: 1px solid #000;
             }
         }
+    }
+}
 
-        .card-body {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 30px;
+.team-section {
+    margin-top: 150px;
+    padding: 36px;
+    background-color: #fff;
+    .team-persons {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
 
-            span {
-                text-transform: uppercase;
-                letter-spacing: 0.26rem;
-            }
-            p {
-                letter-spacing: 0.12rem;
-            }
+    .team-person {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+
+        img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        span {
+            margin-top: 20px;
+            font-size: 16px;
+            letter-spacing: 0.1rem;
+        }
+
+        strong {
+            font-size: 20px;
+            margin-top: 10px;
+        }
+
+        a {
+            margin-top: 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            transition: opacity 0.2s ease-out;
+        }
+
+        a:hover {
+            opacity: 0.3;
         }
     }
 }
@@ -224,9 +230,9 @@ body{
     position: relative;
     z-index: 6;
     background-color: #fff;
-}
-
-.Lore-Explore {
+  }
+  
+  .Lore-Explore {
     top: 20px;
     position: relative;
     left: 10px;
@@ -234,9 +240,9 @@ body{
     text-transform: uppercase;
     writing-mode: vertical-lr;
     color: #ccc;
-}
-
-.Lore-Explore::after {
+  }
+  
+  .Lore-Explore::after {
     content: "";
     position: absolute;
     width: 1px;
@@ -245,15 +251,15 @@ body{
     left: 10px;
     border: 1px solid #ccc;
     writing-mode: horizontal-tb;
-}
-
-.Lore-Cards {
+  }
+  
+  .Lore-Cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
-}
-
-.Lore-Card {
+  }
+  
+  .Lore-Card {
     max-width: 420px;
     min-height: 500px;
     display: flex;
@@ -261,34 +267,34 @@ body{
     justify-content: space-between;
     align-items: center;
     cursor: pointer;
-
+  
     .Lore-Card-CatNDate {
-        display: flex;
-        gap: 40px;
-        justify-content: space-around;
+      display: flex;
+      gap: 40px;
+      justify-content: space-around;
     }
-
+  
     h4 {
-        font-weight: bold;
+      font-weight: bold;
     }
-}
-
-.Lore-Card-Image {
+  }
+  
+  .Lore-Card-Image {
     position: relative;
-}
-
-.Lore-Card-Image::before {
-    content: "";
+  }
+  
+  .Lore-Card-Image::before {
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.26);
-    z-index: 45;
-}
-
-.Lore-Card-Image::after {
+    background-color: rgba(0, 0, 0, 0.26); 
+    z-index: 45; 
+  }
+  
+  .Lore-Card-Image::after {
     content: url("/icons/arrow.svg");
     width: 70px;
     height: 70px;
@@ -301,16 +307,16 @@ body{
     left: 40%;
     position: absolute;
     z-index: 1;
-}
-
-.Lore-Card:hover {
+  }
+  
+  .Lore-Card:hover {
     .Lore-Card-Image::before {
-        transition: all 0.6s ease;
-        background-color: rgba(0, 0, 0, 0);
+      transition: all 0.6s ease;
+      background-color: rgba(0, 0, 0, 0);
     }
-}
-
-.startCov-Bg{
+  }
+  
+  .startCov-Bg{
     display: flex; /* Включает flexbox */
     justify-content: center; /* Центрирует по горизонтали */
     align-items: center; /* Центрирует по вертикали */
@@ -354,7 +360,6 @@ body{
     }
     
   }
-  
   .insta-Section{
     margin-top: 120px;
     display: flex;
@@ -524,23 +529,31 @@ body{
   
 
 
-  @media (max-width:1360px) {
-    .insta-posts{
-      grid-template-columns: repeat(2, 1fr);
+@media (max-width: 1400px) {
+    .team-preview-sec {
+        .team-cards {
+        }
     }
-  }
-  
+}
 
 @media (max-width: 992px) {
+    .team-preview-sec {
+        .team-cards {
+            gap: 40px;
+        }
+    }
+
     .Inspiration-Section {
         grid-template-columns: repeat(1, 1fr);
         .Insporation-Info {
             position: relative;
-            margin-bottom: 210px;
+            margin-bottom: 110px;
+            text-align: center;
         }
         .Insporation-Card-Info {
             display: flex;
             flex-direction: column;
+
             gap: 20px;
         }
         .Insporation-Card {
@@ -552,17 +565,25 @@ body{
         }
     }
     .Lore-Cards {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    .insta-posts{
-        grid-template-columns: repeat(2, 2fr);
-      }
-    .contact-Cards{
+        display: flex;
         flex-wrap: wrap;
-      }
+        justify-content: center;
+    }
+    .insta-posts {
+        grid-template-columns: repeat(2, 2fr);
+    }
+    .contact-Cards {
+        flex-wrap: wrap;
+    }
+    
 }
 
 @media (max-width: 768px) {
+    .team-preview-sec {
+        .team-cards {
+            justify-content: center;
+        }
+    }
     .steps-section {
         .steps-service {
             grid-template-columns: 1fr 1fr;
@@ -572,9 +593,9 @@ body{
             }
         }
     }
-    .Insporation-Info{
+    .Insporation-Info {
         text-align: center;
-        p{
+        p {
             margin-top: 20px;
         }
     }
@@ -592,76 +613,48 @@ body{
             }
         }
     }
-    .insta-Section{
+    .insta-Section {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
-      .insta-info{
+    }
+    .insta-info {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        h3{
-          text-align: center;
+        h3 {
+            text-align: center;
         }
-      }
-      .insta-posts{
+    }
+    .insta-posts {
         grid-template-columns: repeat(1, 2fr);
-      }
-      .insta-card{
+    }
+    .insta-card {
         max-width: 400px;
         height: 400px;
-      }
-      .contact-Info{
+    }
+    .contact-Info {
         align-items: center;
-        p{
-          text-align: center;
+        p {
+            text-align: center;
         }
-      }
-      .contact-Cards{
+    }
+    .contact-Cards {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-      }
-      .contact-Section{
-        grid-template-columns: repeat(1,1fr);
-      }
+    }
+    .contact-Section {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
-@media (max-width: 480px) {
-    .steps-section {
-        .steps-service {
-            grid-template-columns: repeat(1, 1fr);
-            .step-service:nth-child(3) {
-                grid-column: 1;
-            }
-        }
-    }
-    .Insporation-Card {
-        .card-body {
-            flex-direction: column;
-        }
-    }
-    .Lore-Cards {
-        grid-template-columns: repeat(1, 1fr);
-      }
-    
-      .Lore-Explore {
-        margin-bottom: 100px;
-        position: relative;
-        text-transform: uppercase;
-        writing-mode: horizontal-tb;
-      }
-    
-      .quote{
+@media (max-width:480px) {
+    .quote{
         p{
           font-size: 1.8rem;
           max-width: 160px;
         }
-      }
-      .Lore-Explore::after {
-        content: "";
-        display: none;
       }
 }
