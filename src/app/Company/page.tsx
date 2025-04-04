@@ -19,16 +19,16 @@ export default function Company() {
                     <section className='team-preview-sec'>
                         <div className="team-cards">
                             <div className="team-card">
-                                <Image className='w-full h-full object-cover' src="/images/Card/Card1.jpeg" alt='' width={800} height={500} quality={100} />
+                                <Image className='w-full h-full object-cover' src="/images/Card/card1.jpeg" alt='' width={800} height={500} quality={100} />
                             </div>
                             <div className="team-card">
-                                <Image className='w-full h-full object-cover' src="/images/Card/Card1.jpeg" alt='' width={800} height={500} quality={100} />
+                                <Image className='w-full h-full object-cover' src="/images/Card/card1.jpeg" alt='' width={800} height={500} quality={100} />
                             </div>
                             <div className="team-card">
-                                <Image className='w-full h-full object-cover' src="/images/Card/Card1.jpeg" alt='' width={800} height={500} quality={100} />
+                                <Image className='w-full h-full object-cover' src="/images/Card/card1.jpeg" alt='' width={800} height={500} quality={100} />
                             </div>
                             <div className="team-card">
-                                <Image className='w-full h-full object-cover' src="/images/Card/Card1.jpeg" alt='' width={800} height={500} quality={100} />
+                                <Image className='w-full h-full object-cover' src="/images/Card/card1.jpeg" alt='' width={800} height={500} quality={100} />
                             </div>
                         </div>
                     </section>

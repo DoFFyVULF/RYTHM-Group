@@ -10,7 +10,7 @@ body {
     align-items: center; /* Центрирует по вертикали */
     width: 100%; /* Занимает всю ширину экрана */
     height: 100vh; /* Занимает всю высоту экрана */
-    background-image: url("/Home/Company.jpeg");
+    background-image: url("/Home/company.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -131,7 +131,7 @@ body {
 }
 
 .team-section {
-    margin-top: 150px;
+    margin-top: 60px;
     padding: 36px;
     background-color: #fff;
     .team-persons {
